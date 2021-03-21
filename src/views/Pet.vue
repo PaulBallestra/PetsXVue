@@ -2,8 +2,8 @@
 
     <div class="home">
 
-        <h1> Name (Spec) </h1>
-        <p> Birth Date </p>
+        <h1> {{pet.name}} ({{pet.species}}) </h1>
+        <p> {{pet.birthYear}} </p>
 
     </div>
 
@@ -13,7 +13,11 @@
 
     export default {
         name: "Pets",
-
+        computed: {
+            pet(){
+                return this.$store.getters.getPet(this.$route.params.id);
+            },
+        }
     }
 
 </script>

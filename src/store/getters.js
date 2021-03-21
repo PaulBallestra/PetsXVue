@@ -33,7 +33,7 @@ export const numberOfCats = (state) => {
     return numberOf;
 };
 
-//Get dog with ID
-export const getDog = (state) => {
-
+//Get pet with ID
+export const getPet = (state) => (id) => {
+    return state.pets[id];
 };
