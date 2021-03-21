@@ -4,6 +4,12 @@
 
         <h2> Dashboard </h2>
 
+        <div>
+
+            <h4> {{numberOfPets}} Pets </h4>
+
+        </div>
+
     </div>
 
 </template>
@@ -12,7 +18,11 @@
 
     export default {
         name: "Dashboard",
-        components: {}
+        computed: {
+            numberOfPets(){
+                return this.$store.getters.numberOfPets;
+            }
+        }
     }
 
 </script>
