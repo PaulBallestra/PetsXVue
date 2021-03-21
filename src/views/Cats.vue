@@ -5,7 +5,7 @@
         <ul style="list-style: none;">
 
             <li v-for="pet in pets">
-                <p v-if="pet.species === 'Cat'">  Name : {{pet.name}} | Birth Year : {{pet.birthYear}} | Species : {{pet.species}} </p>
+                <p v-if="pet.species === 'Cat'">  Name : <strong> <a href="/pets/cats/"> {{pet.name}} </a> </strong> | Birth Year : <strong> {{pet.birthYear}} </strong>  | Species : <strong> {{pet.species}} </strong> </p>
             </li>
 
         </ul>
